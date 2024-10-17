@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Propiedades Inmobiliarias</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <style>
+        .logout-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <button id="logoutButton" class="btn btn-danger logout-button">Cerrar Sesión</button>
+    <h1 class="text-center mb-4">Gestión de Propiedades Inmobiliarias</h1>
+
+    <h2 class="mt-4">Agregar Propiedad</h2>
+    <form id="propertyForm" class="mb-4">
+        <div class="mb-3">
+            <input type="text" id="address" class="form-control" placeholder="Dirección" required>
+        </div>
+        <div class="mb-3">
+            <input type="number" id="price" class="form-control" placeholder="Precio" required min="1">
+        </div>
+        <div class="mb-3">
+            <input type="number" id="size" class="form-control" placeholder="Tamaño (m²)" required min="1">
+        </div>
+        <div class="mb-3">
+            <textarea id="description" class="form-control" placeholder="Descripción" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar Propiedad</button>
+    </form>
+
+    <h2 class="mt-4">Lista de Propiedades</h2>
+    <ul id="propertyList" class="list-group mt-3"></ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
